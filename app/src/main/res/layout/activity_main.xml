@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignTop="@id/ballsText"
+        android:layout_alignBottom="@id/ballCounter"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/ballStrikeBorder" />
+
+    <EditText
+        android:id="@+id/ballCounter"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_ParentBottom="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false"
+        android:layout_toLeftOf="@id/ballStrikeBorder"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="0"
+        android:textSize="45sp" />
+
+    <EditText
+        android:id="@+id/strikeCounter"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_ParentBottom="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:layout_toRightOf="@id/ballStrikeBorder"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="0"
+        android:textSize="45sp" />
+
+
+    <TextView
+        android:id="@+id/ballsText"
+        android:text="@string/Balls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ballCounter"
+        android:layout_marginBottom="0dp"
+        android:layout_alignLeft="@id/ballCounter"
+        android:layout_alignRight="@id/ballCounter"
+        android:layout_alignStart="@id/ballCounter"
+        android:layout_alignEnd="@id/ballCounter"
+        android:textSize="25sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/strikesText"
+        android:text="@string/Strikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/strikeCounter"
+        android:layout_marginBottom="0dp"
+        android:layout_alignLeft="@id/strikeCounter"
+        android:layout_alignRight="@id/strikeCounter"
+        android:layout_alignStart="@id/strikeCounter"
+        android:layout_alignEnd="@id/strikeCounter"
+        android:textSize="25sp"
+        android:gravity="center" />
+
+</RelativeLayout>
+
