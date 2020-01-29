@@ -15,20 +15,18 @@
         android:layout_marginRight="15dp"
         android:background="@color/colorPrimary"
         android:layout_alignTop="@id/ballsText"
-        android:layout_alignBottom="@id/ballCounter"
+        android:layout_alignBottom="@id/ballsAdder"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
         android:id="@+id/ballStrikeBorder" />
 
-    <EditText
+    <TextView
         android:id="@+id/ballCounter"
         android:layout_width="104dp"
         android:layout_height="wrap_content"
-        android:layout_ParentBottom="false"
         android:layout_alignParentStart="false"
         android:layout_alignParentLeft="false"
-        android:layout_toLeftOf="@id/ballStrikeBorder"
         android:layout_alignParentTop="false"
         android:layout_alignParentEnd="false"
         android:layout_alignParentRight="false"
@@ -38,29 +36,33 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
+        android:layout_toStartOf="@id/ballStrikeBorder"
+        android:layout_toLeftOf="@id/ballStrikeBorder"
         android:ems="10"
         android:gravity="center"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:text="0"
         android:textSize="45sp" />
 
-    <EditText
+    <TextView
         android:id="@+id/strikeCounter"
         android:layout_width="104dp"
         android:layout_height="wrap_content"
-        android:layout_ParentBottom="false"
         android:layout_alignParentStart="false"
         android:layout_alignParentLeft="false"
         android:layout_alignParentTop="false"
         android:layout_alignParentEnd="false"
         android:layout_alignParentRight="false"
-        android:layout_toRightOf="@id/ballStrikeBorder"
         android:layout_centerVertical="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="20dp"
+        android:layout_toEndOf="@id/ballStrikeBorder"
+        android:layout_toRightOf="@id/ballStrikeBorder"
+        android:autofillHints=""
         android:ems="10"
         android:gravity="center"
         android:inputType="number"
@@ -70,31 +72,53 @@
 
     <TextView
         android:id="@+id/ballsText"
-        android:text="@string/Balls"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/ballCounter"
-        android:layout_marginBottom="0dp"
-        android:layout_alignLeft="@id/ballCounter"
-        android:layout_alignRight="@id/ballCounter"
         android:layout_alignStart="@id/ballCounter"
+        android:layout_alignLeft="@id/ballCounter"
         android:layout_alignEnd="@id/ballCounter"
-        android:textSize="25sp"
-        android:gravity="center" />
+        android:layout_alignRight="@id/ballCounter"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:text="@string/Balls"
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/strikesText"
-        android:text="@string/Strikes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/strikeCounter"
+        android:layout_alignStart="@id/strikeCounter"
+        android:layout_alignLeft="@id/strikeCounter"
+        android:layout_alignEnd="@id/strikeCounter"
+        android:layout_alignRight="@id/strikeCounter"
         android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:text="@string/Strikes"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/ballsAdder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ballCounter"
+        android:layout_alignLeft="@id/ballCounter"
+        android:layout_alignRight="@id/ballCounter"
+        android:text="@string/plusOne"
+        android:layout_alignStart="@id/ballCounter"
+        android:layout_alignEnd="@id/ballCounter" />
+
+    <Button
+        android:id="@+id/strikesAdder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/strikeCounter"
         android:layout_alignLeft="@id/strikeCounter"
         android:layout_alignRight="@id/strikeCounter"
+        android:text="@string/plusOne"
         android:layout_alignStart="@id/strikeCounter"
-        android:layout_alignEnd="@id/strikeCounter"
-        android:textSize="25sp"
-        android:gravity="center" />
+        android:layout_alignEnd="@id/strikeCounter" />
 
 </RelativeLayout>
 

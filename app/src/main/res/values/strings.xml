@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">UmpireBuddy</string>
     <string name="plus_symbol">+</string>
-    <string name="plus_symbol">+</string>
-    <string name="plus_button">plus button</string>
     <string name="plus_button">plus button</string>
     <string name="balls_strikes">Balls | Strikes</string>
     <string name="Strikes">STRIKES</string>
     <string name="Balls">BALLS</string>
+    <string name="plusOne">+1</string>
 </resources>
