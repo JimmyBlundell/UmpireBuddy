@@ -6,4 +6,6 @@
     <string name="Strikes">STRIKES</string>
     <string name="Balls">BALLS</string>
     <string name="plusOne">+1</string>
+    <string name="exit">EXIT</string>
+    <string name="reset">RESET</string>
 </resources>

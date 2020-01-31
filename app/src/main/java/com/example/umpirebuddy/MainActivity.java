@@ -6,10 +6,24 @@ import android.os.Bundle;
 
 import android.widget.TextView;
 
+import android.widget.Button;
+
+import android.view.View;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView numBalls;
     TextView numStrikes;
+
+    Button ballsAdder;
+    Button strikesAdder;
+
+    Button reset;
+    Button exit;
+
+    int ballCount = 0;
+    int strikeCount = 0;
+
 
 
     @Override
@@ -20,5 +34,42 @@ public class MainActivity extends AppCompatActivity {
         numBalls = findViewById(R.id.ballCounter);
         numStrikes = findViewById(R.id.strikeCounter);
 
+        ballsAdder = findViewById(R.id.ballsAdder);
+        strikesAdder = findViewById(R.id.strikesAdder);
+
+        reset = findViewById(R.id.resetButton);
+        exit = findViewById(R.id.exitButton);
+
     }
+
+    public void addBallCount(View view) {
+
+        if (ballCount < 3) {
+            ballCount++;
+            numBalls.setText(Integer.toString(ballCount));
+        }
+    }
+
+    public void addStrikeCount(View view) {
+
+        if (strikeCount < 2) {
+            strikeCount++;
+            numStrikes.setText(Integer.toString(strikeCount));
+        }
+    }
+
+    public void resetCount(View view) {
+
+        ballCount = 0;
+        strikeCount = 0;
+
+        numBalls.setText(Integer.toString(ballCount));
+        numStrikes.setText(Integer.toString(strikeCount));
+
+    }
+
+    public void exitApp(View view) {
+        System.exit(0);
+    }
+
 }

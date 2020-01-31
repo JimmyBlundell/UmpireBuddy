@@ -41,7 +41,6 @@
         android:ems="10"
         android:gravity="center"
         android:importantForAutofill="no"
-        android:inputType="number"
         android:text="0"
         android:textSize="45sp" />
 
@@ -65,7 +64,6 @@
         android:autofillHints=""
         android:ems="10"
         android:gravity="center"
-        android:inputType="number"
         android:text="0"
         android:textSize="45sp" />
 
@@ -105,9 +103,10 @@
         android:layout_below="@id/ballCounter"
         android:layout_alignLeft="@id/ballCounter"
         android:layout_alignRight="@id/ballCounter"
-        android:text="@string/plusOne"
         android:layout_alignStart="@id/ballCounter"
-        android:layout_alignEnd="@id/ballCounter" />
+        android:layout_alignEnd="@id/ballCounter"
+        android:text="@string/plusOne"
+        android:onClick="addBallCount" />
 
     <Button
         android:id="@+id/strikesAdder"
@@ -116,9 +115,35 @@
         android:layout_below="@id/strikeCounter"
         android:layout_alignLeft="@id/strikeCounter"
         android:layout_alignRight="@id/strikeCounter"
-        android:text="@string/plusOne"
         android:layout_alignStart="@id/strikeCounter"
-        android:layout_alignEnd="@id/strikeCounter" />
+        android:layout_alignEnd="@id/strikeCounter"
+        android:text="@string/plusOne"
+        android:onClick="addStrikeCount" />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="21dp"
+        android:text="@string/exit"
+        android:onClick="exitApp" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ballStrikeBorder"
+        android:layout_alignLeft="@id/ballCounter"
+        android:layout_alignRight="@id/strikeCounter"
+        android:layout_alignStart="@id/ballCounter"
+        android:layout_alignEnd="@id/strikeCounter"
+        android:onClick="resetCount"
+        android:text="@string/reset" />
 
 </RelativeLayout>
 
