@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button reset;
     Button exit;
+    Button about;
 
     int ballCount = 0;
     int strikeCount = 0;
@@ -42,9 +43,35 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void openBallDialog() {
+        ballDialog dlg = new ballDialog();
+        dlg.show(getSupportFragmentManager(), "jimmyjam");
+    }
+
+    public void openStrikeDialog() {
+        strikeDialog dlg = new strikeDialog();
+        dlg.show(getSupportFragmentManager(), "jimmyjam");
+    }
+
+    public void openAboutDialog() {
+        aboutDialog dlg = new aboutDialog();
+        dlg.show(getSupportFragmentManager(), "jimmyjam");
+    }
+
+
     public void addBallCount(View view) {
 
-        if (ballCount < 3) {
+        if (ballCount == 3) {
+            ballCount = 0;
+            strikeCount = 0;
+            numBalls.setText(Integer.toString(ballCount));
+            numStrikes.setText(Integer.toString(strikeCount));
+            openBallDialog();
+
+        }
+
+
+        else {
             ballCount++;
             numBalls.setText(Integer.toString(ballCount));
         }
@@ -52,11 +79,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void addStrikeCount(View view) {
 
-        if (strikeCount < 2) {
+        if (strikeCount == 2) {
+            ballCount = 0;
+            strikeCount = 0;
+            numBalls.setText(Integer.toString(ballCount));
+            numStrikes.setText(Integer.toString(strikeCount));
+            openStrikeDialog();
+        }
+
+        else {
             strikeCount++;
             numStrikes.setText(Integer.toString(strikeCount));
         }
+
     }
+
 
     public void resetCount(View view) {
 
@@ -66,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
         numBalls.setText(Integer.toString(ballCount));
         numStrikes.setText(Integer.toString(strikeCount));
 
+    }
+
+    public void aboutPopup(View view) {
+        openAboutDialog();
     }
 
     public void exitApp(View view) {
